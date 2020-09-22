@@ -1,0 +1,192 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>FuelOil Help</title>
+</head>
+
+<body style="font-family: Trebuchet MS; color: #FF9900" link="#FF9900" vlink="#FF9900" alink="#FF9900">
+
+<p>About FuelOil<br>
+&nbsp;&nbsp;&nbsp; FuelOil is a two part Application Update Creator and 
+Installer for Visual Basic 6.&nbsp; <br>
+&nbsp;&nbsp;&nbsp; Fuel is the Installer, Oil the update package creator.</p>
+
+<p><b>What does Oil do?<br>
+</b>Uses a complied executable to create an update installation package<b><br>
+</b>Finds the executable's File name and version<b><br>
+</b>Allows for entry of new files required for the update.<br>
+Allows for creation of new folders/directories.<b><br>
+</b>Allows for new files to be .zip compressed<br>
+Allows for update to the<b> </b>uninstall log - ST6UNST.LOG, for VB's P&amp;D wirard<b><br>
+</b>Creates an install ini file that the Fuel install reads.<br>
+Copies any new files and the Fuel installer to the package folder.</p>
+
+<p><b>What does the Fuel installer do?</b><br>
+Reads the install.oil (ini file)<br>
+Finds the Application to update's path<br>
+Finds the Windows System Dir.<br>
+Determines what files to install and where they go.<br>
+Installs the files, downloads then if needed. <br>
+Registers any System files (ocx,dll)<br>
+Updates the uninstall log - ST6UNST.LOG,&nbsp; if selected to.<br>
+<br>
+&nbsp;</p>
+<p><a href="#Getting Started with Oil" style="text-decoration: none">Getting Started with Oil</a><br>
+&nbsp;&nbsp;&nbsp; <a style="text-decoration: none" href="#Creating Oil Files">
+Creating Oil Files</a><br>
+&nbsp;&nbsp;&nbsp;
+<a href="#Finding the App to Package" style="text-decoration: none">Finding the 
+App to Package</a><br>
+&nbsp;&nbsp;&nbsp;
+<a style="text-decoration: none" href="#Where to install from">Where to install 
+from</a><br>
+&nbsp;&nbsp;&nbsp; <a style="text-decoration: none" href="#Create Folders">Creating Folders</a><br>
+&nbsp;&nbsp; <a style="text-decoration: none" href="#Adding Files">&nbsp;Adding 
+Files</a><br>
+&nbsp;<a style="text-decoration: none" href="#Add an Icon">&nbsp;&nbsp; 
+Add an Icon</a><br>
+&nbsp;&nbsp;&nbsp; <a style="text-decoration: none" href="#Saving the Files">
+Saving the Files</a><br>
+&nbsp;&nbsp;&nbsp; <a style="text-decoration: none" href="#Creating Oil">Creating Oil</a></p>
+<p><a href="#Fuel Installer" style="text-decoration: none">Fuel Installer</a></p>
+
+<p><b><font size="4">&nbsp;</font><a name="Getting Started with Oil"><font size="4">Getting Started with Oil</font></a></b><br>
+&nbsp;&nbsp; Before you begin using OIL you will need to compile the Fuel 
+installer and place a copy in the App path of the Oil Project.<br>
+&nbsp;</p>
+
+<p><b><a name="Creating Oil Files"><font size="4">Creating Oil Files</font></a></b><br>
+&nbsp;&nbsp;&nbsp; Oil will create a package of the Update list and Files into a 
+folder for distribution.<br>
+Run Oil to begin creating the update package. When Oil creates an update package 
+the package will consist of:</p>
+
+<p>A folder with the name of your application followed by &quot;Oil&quot;&nbsp; i.e.&nbsp; 
+MyAppOil<br>
+this folder will contain:<br>
+1. A text list of the files to be installed and where. (install.oil)<br>
+2. A folder named &quot;Files&quot; containing the files for updating.<br>
+&nbsp;&nbsp;&nbsp; or a Zipped folder named &quot;Files.zip&quot; of you selected to 
+compile the files.<br>
+3. A copy of the Fuel Installer.<br>
+4. A .gif image representing your App that will show up on the Fuel Installer.</p>
+
+<p>&nbsp;</p>
+
+<p><b><font size="4"><a name="Finding the App to Package">Finding the App to 
+Package</a></font></b><br>
+&nbsp;&nbsp;&nbsp; When you run Oil the first thing you must do is determine is 
+what app you are going to update.<br>
+Click the &quot;Browse&quot; button and locate the compiled app.<br>
+Oil reads the App's file information and gets the Name and version. <br>
+It is important the you package the newest version of your .exe.<br>
+Oil will remember any previous selection, which can be chosen from the combo 
+box.</p>
+
+<p>&nbsp; If you created a setup/installation with VB's Package and Deployment 
+Wizard,&nbsp; Oil can tell the Fuel Installer to <br>
+update the uninstall log - ST6UNST.LOG for you new files.<br>
+&nbsp; The EXE is NOT added to the uninstall log - ST6UNST.LOG when selecting 
+this option, it already exists.</p>
+
+<p><br>
+<b><font size="4"><a name="Where to install from">Where to install from</a></font></b><br>
+&nbsp;&nbsp;&nbsp; You must&nbsp; determine 
+where the Update file are located.</p>
+
+<p><i><b>Installing from the web</b></i><br>
+&nbsp;&nbsp;&nbsp; Choose &quot;Install from the web&quot; if the update files are to be 
+placed on a web sever. <br>
+You will be prompted for the URl of these files.&nbsp; You will need to enter the 
+full URL including subfolders.<br>
+You can upload the &quot;Files&quot; folder created by Oil to the server.&nbsp; Make sure 
+the URL ends with a &quot;/&quot;.<br>
+When the Fuel Installer runs it will download and install the files from the 
+URL.&nbsp; Once The installation is complete Fuel will delete the downloaded 
+files. You will not be able to zip the files if you chose this option. The Fuel 
+installer doesn't have the ability to uncompress zip files at this time.</p>
+
+<p><i><b>Installing form a File</b></i><br>
+&nbsp;&nbsp;&nbsp; Choose &quot;Install from a File&quot; if the update files are to be 
+put on a disk or downloaded as a Zip file.<br>
+The Fuel Installer will not delete the files after installation.&nbsp; If 
+&quot;Installed from File&quot; the &quot;Files&quot; folder created by Oil <br>
+must be in the same Directory or App.path as the Fuel Installer.</p>
+
+<p><b>Do not change the &quot;Files&quot; folder to a different name.&nbsp; The Fuel 
+installer looks for the &quot;Files&quot; folder.</b></p>
+
+<p>&nbsp;</p>
+
+<p><b><a name="Create Folders"><font size="4">Creating Folders</font></a></b><br>
+&nbsp;&nbsp;&nbsp; Once you have select where to install the files from you will be prompted 
+for creating any new folders/directories for this update.<br>
+The new folders will be placed in your applications directory.&nbsp; An example 
+might be that you didn't include any help files with your original release and 
+now you have some Html help pages that that need to be place in a &quot;Help&quot; folder 
+inside your App's Directory. <br>
+Enter the folder names in to the textbox and click &quot;Create New Folder&quot;.&nbsp; If 
+you need no new folders click &quot;Next&quot;. Repeat as needed.</p>
+
+<p>&nbsp;</p>
+
+<p><b><font size="4"><a name="Adding Files">&nbsp;Adding Files</a></font></b><br>
+&nbsp;&nbsp;&nbsp;&nbsp; Clicking the &quot;Add Files&quot; button will open a dialog 
+window in which you can select the files you need for this update, adding them 
+to the List.&nbsp; The EXE you selected to package should appear first in the 
+list. Don't remove it, it would be bad. Continue until all the file need for 
+this update are added.&nbsp; As you add files you are prompted for their 
+installation location by the &quot;Where&quot; window.<br>
+With your choices being:<br>
+<b><i>AppPath: </i></b>Your Application's Directory<br>
+&nbsp;<b><i>System: </i></b>Window's System Folder <br>
+&nbsp;&nbsp;&nbsp; Select this for system files such as ocx's and dll's.&nbsp; 
+Files with this install location will be registered by the Fuel installer.<br>
+<b><i>New Folder: </i></b>If you previously created any new folders they will 
+appear as a option.<br>
+<br>
+To remove a file, highlight it and uncheck the box.<b><br>
+Note:&nbsp; It is important NOT to include any files that were part of an 
+earlier installation or update.<br>
+</b>Why? <br>
+1. You don't need to install them, they already exist.<br>
+2. The Fuel overwrites any existing files.&nbsp; <br>
+3. If you selected to update the uninstall log. You could create duplicate 
+entries, causing the App to uninstall improperly.<br>
+&nbsp;</p>
+
+<p><b><font size="4"><a name="Add an Icon">Add an Icon</a></font></b><br>
+&nbsp;&nbsp;&nbsp; You may select to add a icon/image to the Fuel installer that 
+represent your application.&nbsp; The image must be in the form of a GIF and 
+should have a transparent background.&nbsp; The Image must not be larger than 55 
+x 55 pixels.&nbsp; You do not have to select an image.&nbsp; </p>
+
+<p>&nbsp;</p>
+
+<p><font size="4"><b><a name="Saving the Files">Saving the Files</a></b></font><br>
+&nbsp;&nbsp;&nbsp; Once you have added all the files that are required for the 
+update.&nbsp; Click the &quot;Next&quot; button. <br>
+Select where to save the OIL package. You can chose to have the &quot;Files&quot; folder 
+compressed into a Zip format (Thanks to OldManMarcin). The Fuel installer and 
+the Icon you selected will not be included in the Zip folder.
+The package will be saved in a&nbsp;folder with the name of your application 
+followed by &quot;Oil&quot;&nbsp; i.e.&nbsp; MyAppOil</p>
+
+<p>&nbsp;</p>
+
+<p><font size="4"><b><a name="Fuel Installer">Fuel Installer</a><br>
+&nbsp;&nbsp;&nbsp; </b></font>The Fuel Installer will not run alone it needs an 
+&quot;install.oil&quot; text file to read.&nbsp; To test the Fuel installer, Run Oil and 
+create a sample update for an existing Application.&nbsp;&nbsp; It would be 
+recommended to run VB's package and deployment&nbsp; wizard and install your App before trying to update 
+it.&nbsp; If you run the App from the VB IDE and then 
+run the Fuel Installer you may overwrite files you did not intend to.</p>
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>

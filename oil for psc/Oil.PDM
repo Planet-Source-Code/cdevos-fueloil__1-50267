@@ -1,0 +1,107 @@
+[Root]
+Most Recent Package=FuilOil Package 1
+
+
+[Package|FuilOil Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\Microsoft Visual Studio\VB98\install update creater\FuelOil Package
+
+[Package|FuilOil Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|FuilOil Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|FuilOil Package 1|Files Found]
+
+[Package|FuilOil Package 1|Files Released]
+
+[Package|FuilOil Package 1|Missing Dependency Information]
+D:\Microsoft Visual Studio\VB98\UpdateInstaller\Fuel.exe=
+
+[Package|FuilOil Package 1|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\MSCOMCTL.OCX=
+C:\WINDOWS\system32\MSINET.OCX=
+C:\WINDOWS\system32\comdlg32.ocx=
+C:\WINDOWS\system32\RICHTX32.OCX=
+
+[Package|FuilOil Package 1|Files Added]
+D:\Microsoft Visual Studio\VB98\UpdateInstaller\Fuel.exe=
+
+[Package|FuilOil Package 1|Files Removed]
+
+[Package|FuilOil Package 1|Files In Project]
+D:\Microsoft Visual Studio\VB98\install update creater\Oil.exe=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+D:\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\RICHTX32.OCX=Yes
+D:\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+C:\WINDOWS\system32\comdlg32.ocx=Yes
+C:\WINDOWS\system32\MSINET.OCX=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+D:\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Microsoft Visual Studio\VB98\Wizards\PDWizard\setup1.exe=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+D:\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\Microsoft Visual Studio\VB98\UpdateInstaller\Fuel.exe=Yes
+
+[Package|FuilOil Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|FuilOil Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|FuilOil Package 1|Install Locations]
+D:\Microsoft Visual Studio\VB98\install update creater\Oil.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+D:\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\RICHTX32.OCX=$(WinSysPath)
+D:\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\comdlg32.ocx=$(WinSysPath)
+C:\WINDOWS\system32\MSINET.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCTL.OCX=$(WinSysPath)
+D:\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Microsoft Visual Studio\VB98\Wizards\PDWizard\setup1.exe=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\Microsoft Visual Studio\VB98\UpdateInstaller\Fuel.exe=$(AppPath)
+
+[Package|FuilOil Package 1|Configure Shared Files]
+Applicable=Yes
+D:\Microsoft Visual Studio\VB98\install update creater\Oil.exe=No
+D:\Microsoft Visual Studio\VB98\UpdateInstaller\Fuel.exe=No
+
+[Package|FuilOil Package 1|Distribution]
+Type=single
+Size=
+Title=FuelOil
+
+[Package|FuilOil Package 1|IconGroups]
+Group0=FuelOil
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|FuilOil Package 1|FuelOil]
+Icon1=Oil.exe
+Title1=FuelOil
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|FuilOil Package 1|Package]
+PackageFolder=D:\Microsoft Visual Studio\VB98\install update creater\FuelOil Package
+ProjectFolder=D:\Microsoft Visual Studio\VB98\install update creater
+ServerSideCab=
+File1=D:\Microsoft Visual Studio\VB98\install update creater\FuelOil Package\setup.exe
+File2=D:\Microsoft Visual Studio\VB98\install update creater\FuelOil Package\Setup.Lst
+File3=D:\Microsoft Visual Studio\VB98\install update creater\FuelOil Package\Oil.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
